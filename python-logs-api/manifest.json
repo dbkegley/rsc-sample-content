@@ -4,6 +4,9 @@
     "appmode": "python-api",
     "entrypoint": "app"
   },
+  "environment": {
+    "image": "ghcr.io/rstudio/content-base:r3.6.3-py3.8.8-bionic"
+  },
   "locale": "en_US.UTF-8",
   "python": {
     "version": "3.8.2",
