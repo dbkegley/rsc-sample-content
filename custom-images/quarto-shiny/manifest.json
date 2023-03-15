@@ -13,10 +13,6 @@
     "version": "1.0.37",
     "engines": ["knitr"]
   },
-  "environment": {
-    "image": "dbkegley/rsc-sample-content:custom-image",
-    "prebuilt": true
-  },
   "packages": {
     "R6": {
       "Source": "CRAN",
