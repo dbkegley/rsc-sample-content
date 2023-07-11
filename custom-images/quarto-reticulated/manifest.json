@@ -19,7 +19,10 @@
   },
   "environment": {
     "image": "dbkegley/rsc-sample-content:custom-image",
-    "prebuilt": true
+    "environment_management": {
+      "r": false,
+      "python": false
+    }
   },
   "quarto": {
     "version": "1.0.37",

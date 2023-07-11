@@ -11,7 +11,9 @@
   },
   "environment": {
     "image": "dbkegley/rsc-sample-content:custom-image",
-    "prebuilt": true
+    "environment_management": {
+      "r": false
+    }
   },
   "packages": {
     "base64enc": {

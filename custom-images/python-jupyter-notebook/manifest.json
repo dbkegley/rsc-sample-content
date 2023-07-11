@@ -10,7 +10,9 @@
   },
   "environment": {
     "image": "dbkegley/rsc-sample-content:custom-image",
-    "prebuilt": true
+    "environment_management": {
+      "python": false
+    }
   },
   "version": 1,
   "files": {
