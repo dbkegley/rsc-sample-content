@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "locale": "en_US.UTF-8",
+  "metadata": {
+    "appmode": "python-api",
+    "entrypoint": "app"
+  },
+  "python": {
+    "version": "3.11.3",
+    "package_manager": {
+      "name": "pip",
+      "version": "23.1.2",
+      "package_file": "requirements.txt"
+    }
+  },
+  "environment": {
+    "image": "rstudio/connect:ubuntu22",
+    "environment_management": {
+      "python": null,
+      "r": null
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "app.py": {
+      "checksum": "95830af5591d8d77eca16d04685607a9"
+    }
+  }
+}
