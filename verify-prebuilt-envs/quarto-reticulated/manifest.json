@@ -22,7 +22,7 @@
     }
   },
   "environment": {
-    "image": "rstudio/connect:ubuntu22",
+    "image": "rstudio/connect:ubuntu22-dev",
     "environment_management": {
       "python": null,
       "r": null
