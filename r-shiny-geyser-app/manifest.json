@@ -3,7 +3,7 @@
   "locale": "en_US",
   "platform": "4.3.0",
   "metadata": {
-    "appmode": "shiny",
+    "appmode": "rmd-shiny",
     "primary_rmd": null,
     "primary_html": null,
     "content_category": null,
