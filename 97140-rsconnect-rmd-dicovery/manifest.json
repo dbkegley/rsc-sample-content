@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "locale": "en_US",
+  "platform": "4.3.0",
+  "metadata": {
+    "appmode": "static",
+    "primary_rmd": null,
+    "primary_html": "docs/index.html",
+    "content_category": null,
+    "has_parameters": false
+  },
+  "packages": null,
+  "files": {
+    ".Rbuildignore": {
+      "checksum": "6b725364d67f761851f77bc4be51c810"
+    },
+    "DESCRIPTION": {
+      "checksum": "6cc76790958e67ee1ca93fa2c1dabba2"
+    },
+    "docs/404.html": {
+      "checksum": "5e1167e453d530437184af635be07e97"
+    },
+    "docs/authors.html": {
+      "checksum": "d86f1105aed376376b987b3e1b963ab3"
+    },
+    "docs/bootstrap-toc.css": {
+      "checksum": "5eec6702c35b15a8c2c123301987735d"
+    },
+    "docs/bootstrap-toc.js": {
+      "checksum": "aaa610b29d895e1128447e76b9bc0076"
+    },
+    "docs/docsearch.css": {
+      "checksum": "828dbea96017a994efccb7c30c041577"
+    },
+    "docs/docsearch.js": {
+      "checksum": "2f3c1f7995c9f4f966323f008e3984ad"
+    },
+    "docs/index.html": {
+      "checksum": "6815cafc17e67c3f9576016c262a38af"
+    },
+    "docs/link.svg": {
+      "checksum": "4759f31f8a585e9af173fc579d730265"
+    },
+    "docs/pkgdown.css": {
+      "checksum": "9cd7da30627ce8d0e18fd1cf1f48c83f"
+    },
+    "docs/pkgdown.js": {
+      "checksum": "916db342671c073ca830f33df8c36adc"
+    },
+    "docs/pkgdown.yml": {
+      "checksum": "19a29ffc02044cb857e3e26573aaf42d"
+    },
+    "docs/reference/foo.html": {
+      "checksum": "342498a1b1473ad9cb0e033204e8cfb3"
+    },
+    "docs/reference/index.html": {
+      "checksum": "b4a41d1a922b28d18b48ec35c45f7335"
+    },
+    "docs/sitemap.xml": {
+      "checksum": "ec155c590bca671672bca5d1ece890be"
+    },
+    "man/foo.Rd": {
+      "checksum": "2ed393b3f2cf736f570845320be4faf3"
+    },
+    "NAMESPACE": {
+      "checksum": "d1d7e0c2d6c37b2a6e8dc2fd5b9549eb"
+    },
+    "R/app.R": {
+      "checksum": "35324f234de04e0c88043944b8e68be7"
+    }
+  },
+  "users": null
+}
