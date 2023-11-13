@@ -1,8 +1,0 @@
----
-title: "Simple Rmd document"
-output: html_document
----
-
-# R Markdown report
-
-This is a very important document.

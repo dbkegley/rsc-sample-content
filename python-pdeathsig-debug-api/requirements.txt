@@ -1,5 +1,0 @@
-flask
-flask-restx
-MarkupSafe==2.0.1 # https://github.com/pallets/jinja/issues/1587
-werkzeug <= 0.16.1
-python-prctl
