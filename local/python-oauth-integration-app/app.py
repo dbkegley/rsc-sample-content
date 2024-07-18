@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 # mypy: ignore-errors
-import os
 import json 
 
 import jwt
@@ -25,8 +24,11 @@ def server(input: Inputs, output: Outputs, session: Session):
     def text():
         with Client() as client:
             credentials = client.oauth.get_credentials(session_token)
-            token = jwt.decode(jwt=credentials.get("access_token"), options={"verify_signature": False})
-            return json.dumps(token, indent=4) 
+            try:
+                token = jwt.decode(jwt=credentials.get("access_token"), options={"verify_signature": False})
+                return json.dumps(token, indent=4) 
+            except jwt.exceptions.DecodeError:
+                return credentials.get("access_token", "Access Token Not Found")
 
 
 app = App(app_ui, server)
