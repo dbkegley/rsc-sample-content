@@ -25,8 +25,7 @@ def server(input: Inputs, output: Outputs, session: Session):
     by exchanging a user-session-token
     """
     session_token = session.http_conn.headers.get(
-        "Posit-Connect-User-Session-Token"
-    )
+        "Posit-Connect-User-Session-Token", "session_token not found.")
 
     with Client() as client:
         try:
@@ -41,12 +40,15 @@ def server(input: Inputs, output: Outputs, session: Session):
 
     @render.text
     def parsed_session_token_text():
-        token = jwt.decode(jwt=session_token, options={"verify_signature": False})
-        return json.dumps(token, indent=4) 
+        try:
+            token = jwt.decode(jwt=session_token, options={"verify_signature": False})
+            return json.dumps(token, indent=4) 
+        except jwt.exceptions.DecodeError:
+            return "unable to parse session_token."
 
     @render.text
     def raw_access_token_text():
-        return credentials.get("access_token", "Access Token Not Found")
+        return credentials.get("access_token", "access_token not found.")
 
     @render.text
     def parsed_access_token_text():
@@ -54,7 +56,7 @@ def server(input: Inputs, output: Outputs, session: Session):
             token = jwt.decode(jwt=credentials.get("access_token"), options={"verify_signature": False})
             return json.dumps(token, indent=4) 
         except jwt.exceptions.DecodeError:
-            return credentials.get("access_token", "Access Token Not Found")
+            return credentials.get("access_token", "unable to parse access_token.")
 
 
 app = App(app_ui, server)
