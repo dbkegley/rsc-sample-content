@@ -1,5 +1,5 @@
 databricks-sql-connector==3.0.1
 databricks-sdk==0.20.0
 numpy<2.0.0
-posit-sdk==0.2.2
+posit-sdk==0.3.1
 shiny==0.7.1
