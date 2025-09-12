@@ -1,3 +1,5 @@
+library(shiny)
+
 ui <- function(request) {
   fluidPage(
     textInput("txt", "Enter text"),
