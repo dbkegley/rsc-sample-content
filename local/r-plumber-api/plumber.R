@@ -2,6 +2,7 @@
 #* @apiVersion 1.0.0
 #* @apiDescription This Plumber API returns request headers and environment variables.
 
+library(plumber)
 library(dplyr)
 
 #* @get /environment/vars

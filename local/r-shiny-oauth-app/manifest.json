@@ -9,10 +9,15 @@
     "content_category": null,
     "has_parameters": false
   },
+  "environment": {
+    "r": {
+      "requires": "~=4.3.0"
+    }
+  },
   "packages": {
     "R6": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "R6",
         "Title": "Encapsulated Classes with Reference Semantics",
@@ -29,14 +34,22 @@
         "Packaged": "2021-08-06 20:18:46 UTC; winston",
         "Author": "Winston Chang [aut, cre]",
         "Maintainer": "Winston Chang <winston@stdout.org>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2021-08-19 14:00:05 UTC",
-        "Built": "R 4.3.0; ; 2024-04-24 15:08:44 UTC; unix"
+        "Encoding": "UTF-8",
+        "Built": "R 4.3.0; ; 2023-04-21 21:51:10 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "R6",
+        "RemoteRef": "R6",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "2.5.1"
       }
     },
     "Rcpp": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "Rcpp",
         "Title": "Seamless R and C++ Integration",
@@ -55,14 +68,21 @@
         "Encoding": "UTF-8",
         "NeedsCompilation": "yes",
         "Packaged": "2024-07-11 13:00:10 UTC; edd",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2024-07-17 15:50:06 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-07-30 18:08:17 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-07-18 08:10:29 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "Rcpp",
+        "RemoteRef": "Rcpp",
+        "RemoteRepos": "https://packagemanager.rstudio.com/cran/__linux__/noble/latest",
+        "RemoteReposName": "CRAN",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.0.13"
       }
     },
     "askpass": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "askpass",
         "Type": "Package",
@@ -84,12 +104,19 @@
         "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
         "Repository": "RSPM",
         "Date/Publication": "2023-09-03 20:00:02 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2023-09-04 11:31:18 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2023-09-04 11:31:18 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "askpass",
+        "RemoteRef": "askpass",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.2.0"
       }
     },
     "base64enc": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "base64enc",
         "Version": "0.1-3",
@@ -103,14 +130,22 @@
         "URL": "http://www.rforge.net/base64enc",
         "NeedsCompilation": "yes",
         "Packaged": "2015-02-04 20:31:00 UTC; svnuser",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2015-07-28 08:03:37",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-24 15:08:46 UTC; unix"
+        "Encoding": "UTF-8",
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2023-08-11 13:38:05 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "base64enc",
+        "RemoteRef": "base64enc",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "0.1-3"
       }
     },
     "bslib": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "bslib",
         "Title": "Custom 'Bootstrap' 'Sass' Themes for 'shiny' and 'rmarkdown'",
@@ -136,14 +171,21 @@
         "Packaged": "2024-03-28 21:43:16 UTC; cpsievert",
         "Author": "Carson Sievert [aut, cre] (<https://orcid.org/0000-0002-4958-2844>),\n  Joe Cheng [aut],\n  Garrick Aden-Buie [aut] (<https://orcid.org/0000-0002-7111-0077>),\n  Posit Software, PBC [cph, fnd],\n  Bootstrap contributors [ctb] (Bootstrap library),\n  Twitter, Inc [cph] (Bootstrap library),\n  Javi Aguilar [ctb, cph] (Bootstrap colorpicker library),\n  Thomas Park [ctb, cph] (Bootswatch library),\n  PayPal [ctb, cph] (Bootstrap accessibility plugin)",
         "Maintainer": "Carson Sievert <carson@posit.co>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2024-03-29 01:00:03 UTC",
-        "Built": "R 4.3.0; ; 2024-04-24 15:09:58 UTC; unix"
+        "Built": "R 4.3.0; ; 2024-03-29 04:17:14 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "bslib",
+        "RemoteRef": "bslib",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "0.7.0"
       }
     },
     "cachem": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "cachem",
         "Version": "1.1.0",
@@ -163,14 +205,21 @@
         "Packaged": "2024-05-15 15:54:22 UTC; winston",
         "Author": "Winston Chang [aut, cre],\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Winston Chang <winston@posit.co>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2024-05-16 09:50:11 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-07-30 18:10:18 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-06-26 20:44:36 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "cachem",
+        "RemoteRef": "cachem",
+        "RemoteRepos": "https://packagemanager.rstudio.com/cran/__linux__/noble/latest",
+        "RemoteReposName": "CRAN",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.1.0"
       }
     },
     "cli": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "cli",
         "Title": "Helpers for Developing Command Line Interfaces",
@@ -191,14 +240,21 @@
         "Packaged": "2023-12-10 22:38:10 UTC; gaborcsardi",
         "Author": "Gábor Csárdi [aut, cre],\n  Hadley Wickham [ctb],\n  Kirill Müller [ctb],\n  Salim Brüggemann [ctb] (<https://orcid.org/0000-0002-5329-5987>),\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2023-12-11 07:40:13 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-24 15:08:26 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-01-09 01:08:15 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "cli",
+        "RemoteRef": "cli",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "3.6.2"
       }
     },
     "commonmark": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "commonmark",
         "Type": "Package",
@@ -217,14 +273,21 @@
         "Packaged": "2024-01-30 11:29:56 UTC; jeroen",
         "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  John MacFarlane [cph] (Author of cmark)",
         "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2024-01-30 12:40:02 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-07-30 18:10:09 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-01-31 11:23:09 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "commonmark",
+        "RemoteRef": "commonmark",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.9.1"
       }
     },
     "crayon": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "crayon",
         "Title": "Colored Terminal Output",
@@ -244,14 +307,21 @@
         "Packaged": "2024-06-20 11:49:08 UTC; gaborcsardi",
         "Author": "Gábor Csárdi [aut, cre],\n  Brodie Gaslam [ctb],\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2024-06-20 13:00:02 UTC",
-        "Built": "R 4.3.0; ; 2024-07-30 18:10:07 UTC; unix"
+        "Built": "R 4.3.0; ; 2024-06-26 20:44:08 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "crayon",
+        "RemoteRef": "crayon",
+        "RemoteRepos": "https://packagemanager.rstudio.com/cran/__linux__/noble/latest",
+        "RemoteReposName": "CRAN",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.5.3"
       }
     },
     "curl": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "curl",
         "Type": "Package",
@@ -275,12 +345,19 @@
         "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
         "Repository": "RSPM",
         "Date/Publication": "2024-03-01 23:22:46 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-03-04 12:33:23 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-03-04 12:33:23 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "curl",
+        "RemoteRef": "curl",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "5.2.1"
       }
     },
     "digest": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "digest",
         "Author": "Dirk Eddelbuettel <edd@debian.org> with contributions\n by Antoine Lucas, Jarek Tuszynski, Henrik Bengtsson, Simon Urbanek,\n Mario Frasca, Bryan Lewis, Murray Stokely, Hannes Muehleisen,\n Duncan Murdoch, Jim Hester, Wush Wu, Qiang Kou, Thierry Onkelinx,\n Michel Lang, Viliam Simko, Kurt Hornik, Radford Neal, Kendon Bell,\n Matthew de Queljoe, Ion Suruceanu, Bill Denney, Dirk Schumacher,\n Winston Chang, Dean Attali, and Michael Chirico.",
@@ -298,14 +375,22 @@
         "VignetteBuilder": "simplermarkdown",
         "NeedsCompilation": "yes",
         "Packaged": "2024-03-10 19:40:54 UTC; edd",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2024-03-11 14:10:06 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-24 15:08:23 UTC; unix"
+        "Encoding": "UTF-8",
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-03-12 11:12:18 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "digest",
+        "RemoteRef": "digest",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "0.6.35"
       }
     },
     "fastmap": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "fastmap",
         "Title": "Fast Data Structures",
@@ -322,14 +407,21 @@
         "Packaged": "2024-05-14 17:54:13 UTC; winston",
         "Author": "Winston Chang [aut, cre],\n  Posit Software, PBC [cph, fnd],\n  Tessil [cph] (hopscotch_map library)",
         "Maintainer": "Winston Chang <winston@posit.co>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2024-05-15 09:00:07 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-07-30 18:10:15 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-06-26 20:44:06 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "fastmap",
+        "RemoteRef": "fastmap",
+        "RemoteRepos": "https://packagemanager.rstudio.com/cran/__linux__/noble/latest",
+        "RemoteReposName": "CRAN",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.2.0"
       }
     },
     "fontawesome": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Type": "Package",
         "Package": "fontawesome",
@@ -351,14 +443,21 @@
         "Packaged": "2023-08-19 02:32:12 UTC; rich",
         "Author": "Richard Iannone [aut, cre] (<https://orcid.org/0000-0003-3925-190X>),\n  Christophe Dervieux [ctb] (<https://orcid.org/0000-0003-4474-2498>),\n  Winston Chang [ctb],\n  Dave Gandy [ctb, cph] (Font-Awesome font),\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Richard Iannone <rich@posit.co>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2023-08-19 04:52:40 UTC",
-        "Built": "R 4.3.0; ; 2024-04-24 15:10:01 UTC; unix"
+        "Built": "R 4.3.0; ; 2023-08-21 12:16:43 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "fontawesome",
+        "RemoteRef": "fontawesome",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "0.5.2"
       }
     },
     "fs": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "fs",
         "Title": "Cross-Platform File System Operations Based on 'libuv'",
@@ -384,14 +483,21 @@
         "Packaged": "2023-07-10 16:24:00 UTC; gaborcsardi",
         "Author": "Jim Hester [aut],\n  Hadley Wickham [aut],\n  Gábor Csárdi [aut, cre],\n  libuv project contributors [cph] (libuv library),\n  Joyent, Inc. and other Node contributors [cph] (libuv library),\n  RStudio [cph, fnd]",
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2023-07-20 10:30:02 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-24 15:08:32 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2023-09-12 03:14:52 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "fs",
+        "RemoteRef": "fs",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.6.3"
       }
     },
     "glue": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "glue",
         "Title": "Interpreted String Literals",
@@ -414,14 +520,21 @@
         "Packaged": "2024-01-08 16:10:57 UTC; jenny",
         "Author": "Jim Hester [aut] (<https://orcid.org/0000-0002-2739-7082>),\n  Jennifer Bryan [aut, cre] (<https://orcid.org/0000-0002-6983-2759>),\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Jennifer Bryan <jenny@posit.co>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2024-01-09 23:13:08 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-24 15:08:31 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-01-11 12:53:35 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "glue",
+        "RemoteRef": "glue",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.7.0"
       }
     },
     "htmltools": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Type": "Package",
         "Package": "htmltools",
@@ -445,14 +558,21 @@
         "Packaged": "2024-04-02 14:26:15 UTC; cpsievert",
         "Author": "Joe Cheng [aut],\n  Carson Sievert [aut, cre] (<https://orcid.org/0000-0002-4958-2844>),\n  Barret Schloerke [aut] (<https://orcid.org/0000-0001-9986-114X>),\n  Winston Chang [aut] (<https://orcid.org/0000-0002-1576-2126>),\n  Yihui Xie [aut],\n  Jeff Allen [aut],\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Carson Sievert <carson@posit.co>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2024-04-04 05:03:00 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-24 15:10:03 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-05 04:36:19 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "htmltools",
+        "RemoteRef": "htmltools",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "0.5.8.1"
       }
     },
     "httpuv": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Type": "Package",
         "Package": "httpuv",
@@ -475,14 +595,21 @@
         "Packaged": "2024-03-25 21:06:08 UTC; cpsievert",
         "Author": "Joe Cheng [aut],\n  Winston Chang [aut, cre],\n  Posit, PBC fnd [cph],\n  Hector Corrada Bravo [ctb],\n  Jeroen Ooms [ctb],\n  Andrzej Krzemienski [cph] (optional.hpp),\n  libuv project contributors [cph] (libuv library, see src/libuv/AUTHORS\n    file),\n  Joyent, Inc. and other Node contributors [cph] (libuv library, see\n    src/libuv/AUTHORS file; and http-parser library, see\n    src/http-parser/AUTHORS file),\n  Niels Provos [cph] (libuv subcomponent: tree.h),\n  Internet Systems Consortium, Inc. [cph] (libuv subcomponent: inet_pton\n    and inet_ntop, contained in src/libuv/src/inet.c),\n  Alexander Chemeris [cph] (libuv subcomponent: stdint-msvc2008.h (from\n    msinttypes)),\n  Google, Inc. [cph] (libuv subcomponent: pthread-fixes.c),\n  Sony Mobile Communcations AB [cph] (libuv subcomponent:\n    pthread-fixes.c),\n  Berkeley Software Design Inc. [cph] (libuv subcomponent:\n    android-ifaddrs.h, android-ifaddrs.c),\n  Kenneth MacKay [cph] (libuv subcomponent: android-ifaddrs.h,\n    android-ifaddrs.c),\n  Emergya (Cloud4all, FP7/2007-2013, grant agreement no 289016) [cph]\n    (libuv subcomponent: android-ifaddrs.h, android-ifaddrs.c),\n  Steve Reid [aut] (SHA-1 implementation),\n  James Brown [aut] (SHA-1 implementation),\n  Bob Trower [aut] (base64 implementation),\n  Alexander Peslyak [aut] (MD5 implementation),\n  Trantor Standard Systems [cph] (base64 implementation),\n  Igor Sysoev [cph] (http-parser)",
         "Maintainer": "Winston Chang <winston@posit.co>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2024-03-26 05:50:06 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-07-30 18:08:45 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-03-27 04:11:05 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "httpuv",
+        "RemoteRef": "httpuv",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.6.15"
       }
     },
     "httr2": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "httr2",
         "Title": "Perform HTTP Requests and Process the Responses",
@@ -512,7 +639,7 @@
     },
     "jquerylib": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "jquerylib",
         "Title": "Obtain 'jQuery' as an HTML Dependency Object",
@@ -529,14 +656,21 @@
         "Packaged": "2021-04-26 16:40:21 UTC; cpsievert",
         "Author": "Carson Sievert [aut, cre] (<https://orcid.org/0000-0002-4958-2844>),\n  Joe Cheng [aut],\n  RStudio [cph],\n  jQuery Foundation [cph] (jQuery library and jQuery UI library),\n  jQuery contributors [ctb, cph] (jQuery library; authors listed in\n    inst/lib/jquery-AUTHORS.txt)",
         "Maintainer": "Carson Sievert <carson@rstudio.com>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2021-04-26 17:10:02 UTC",
-        "Built": "R 4.3.0; ; 2024-04-24 15:10:05 UTC; unix"
+        "Built": "R 4.3.0; ; 2023-04-21 21:47:50 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "jquerylib",
+        "RemoteRef": "jquerylib",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "0.1.4"
       }
     },
     "jsonlite": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "jsonlite",
         "Version": "1.8.8",
@@ -555,14 +689,21 @@
         "NeedsCompilation": "yes",
         "Packaged": "2023-12-04 12:57:12 UTC; jeroen",
         "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Duncan Temple Lang [ctb],\n  Lloyd Hilaiel [cph] (author of bundled libyajl)",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2023-12-04 15:20:02 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-24 15:10:06 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2023-12-05 15:35:32 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "jsonlite",
+        "RemoteRef": "jsonlite",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.8.8"
       }
     },
     "later": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "later",
         "Type": "Package",
@@ -583,14 +724,21 @@
         "Packaged": "2023-12-06 00:38:14 UTC; cpsievert",
         "Author": "Winston Chang [aut, cre],\n  Joe Cheng [aut],\n  Posit Software, PBC [cph],\n  Marcus Geelnard [ctb, cph] (TinyCThread library,\n    https://tinycthread.github.io/),\n  Evan Nemerson [ctb, cph] (TinyCThread library,\n    https://tinycthread.github.io/)",
         "Maintainer": "Winston Chang <winston@posit.co>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2023-12-06 09:10:05 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-07-30 18:09:51 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-01-11 13:11:35 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "later",
+        "RemoteRef": "later",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.3.2"
       }
     },
     "lifecycle": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "lifecycle",
         "Title": "Manage the Life Cycle of your Package Functions",
@@ -612,14 +760,21 @@
         "Packaged": "2023-11-06 16:07:36 UTC; lionel",
         "Author": "Lionel Henry [aut, cre],\n  Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>),\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Lionel Henry <lionel@posit.co>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2023-11-07 10:10:10 UTC",
-        "Built": "R 4.3.0; ; 2024-04-24 15:09:02 UTC; unix"
+        "Built": "R 4.3.0; ; 2023-11-08 11:19:23 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "lifecycle",
+        "RemoteRef": "lifecycle",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.0.4"
       }
     },
     "magrittr": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Type": "Package",
         "Package": "magrittr",
@@ -641,14 +796,21 @@
         "Packaged": "2022-03-29 09:34:37 UTC; lionel",
         "Author": "Stefan Milton Bache [aut, cph] (Original author and creator of\n    magrittr),\n  Hadley Wickham [aut],\n  Lionel Henry [cre],\n  RStudio [cph, fnd]",
         "Maintainer": "Lionel Henry <lionel@rstudio.com>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2022-03-30 07:30:09 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-24 15:11:05 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2023-04-21 21:46:21 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "magrittr",
+        "RemoteRef": "magrittr",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "2.0.3"
       }
     },
     "memoise": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "memoise",
         "Title": "'Memoisation' of Functions",
@@ -666,14 +828,21 @@
         "Packaged": "2021-11-24 21:24:50 UTC; jhester",
         "Author": "Hadley Wickham [aut],\n  Jim Hester [aut],\n  Winston Chang [aut, cre],\n  Kirill Müller [aut],\n  Daniel Cook [aut],\n  Mark Edmondson [ctb]",
         "Maintainer": "Winston Chang <winston@rstudio.com>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2021-11-26 16:11:10 UTC",
-        "Built": "R 4.3.0; ; 2024-04-24 15:09:04 UTC; unix"
+        "Built": "R 4.3.0; ; 2023-04-21 21:46:33 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "memoise",
+        "RemoteRef": "memoise",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "2.0.1"
       }
     },
     "mime": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "mime",
         "Type": "Package",
@@ -691,14 +860,21 @@
         "Packaged": "2021-09-28 02:06:04 UTC; yihui",
         "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>),\n  Jeffrey Horner [ctb],\n  Beilei Bian [ctb]",
         "Maintainer": "Yihui Xie <xie@yihui.name>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2021-09-28 05:00:05 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-24 15:08:51 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2023-04-21 21:46:13 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "mime",
+        "RemoteRef": "mime",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "0.12"
       }
     },
     "openssl": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "openssl",
         "Type": "Package",
@@ -726,7 +902,7 @@
     },
     "promises": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Type": "Package",
         "Package": "promises",
@@ -749,14 +925,21 @@
         "Packaged": "2024-04-04 20:02:05 UTC; jcheng",
         "Author": "Joe Cheng [aut, cre],\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Joe Cheng <joe@posit.co>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2024-04-05 15:00:06 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-07-30 18:10:02 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-06 04:12:33 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "promises",
+        "RemoteRef": "promises",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.3.0"
       }
     },
     "rappdirs": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Type": "Package",
         "Package": "rappdirs",
@@ -777,14 +960,52 @@
         "Packaged": "2021-01-28 22:29:57 UTC; hadley",
         "Author": "Hadley Wickham [trl, cre, cph],\n  RStudio [cph],\n  Sridhar Ratnakumar [aut],\n  Trent Mick [aut],\n  ActiveState [cph] (R/appdir.r, R/cache.r, R/data.r, R/log.r translated\n    from appdirs),\n  Eddy Petrisor [ctb],\n  Trevor Davis [trl, aut],\n  Gabor Csardi [ctb],\n  Gregory Jefferis [ctb]",
         "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2021-01-31 05:40:02 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-24 15:08:45 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-01-16 22:24:11 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "rappdirs",
+        "RemoteRef": "rappdirs",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "0.3.3"
+      }
+    },
+    "renv": {
+      "Source": "CRAN",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
+      "description": {
+        "Package": "renv",
+        "Type": "Package",
+        "Title": "Project Environments",
+        "Version": "1.0.7",
+        "Authors@R": "c(\n    person(\"Kevin\", \"Ushey\", role = c(\"aut\", \"cre\"), email = \"kevin@rstudio.com\",\n           comment = c(ORCID = \"0000-0003-2880-7407\")),\n    person(\"Hadley\", \"Wickham\", role = c(\"aut\"), email = \"hadley@rstudio.com\",\n           comment = c(ORCID = \"0000-0003-4757-117X\")),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"))\n    )",
+        "Description": "A dependency management toolkit for R. Using 'renv', you can create\n    and manage project-local R libraries, save the state of these libraries to\n    a 'lockfile', and later restore your library as required. Together, these\n    tools can help make your projects more isolated, portable, and reproducible.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://rstudio.github.io/renv/, https://github.com/rstudio/renv",
+        "BugReports": "https://github.com/rstudio/renv/issues",
+        "Imports": "utils",
+        "Suggests": "BiocManager, cli, covr, cpp11, devtools, gitcreds, jsonlite,\nknitr, miniUI, packrat, pak, R6, remotes, reticulate,\nrmarkdown, rstudioapi, shiny, testthat, uuid, waldo, yaml,\nwebfakes",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.3.1",
+        "VignetteBuilder": "knitr",
+        "Config/Needs/website": "tidyverse/tidytemplate",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "true",
+        "Config/testthat/start-first": "bioconductor,python,install,restore,snapshot,retrieve,remotes",
+        "NeedsCompilation": "no",
+        "Packaged": "2024-04-11 16:26:24 UTC; kevin",
+        "Author": "Kevin Ushey [aut, cre] (<https://orcid.org/0000-0003-2880-7407>),\n  Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>),\n  Posit Software, PBC [cph, fnd]",
+        "Maintainer": "Kevin Ushey <kevin@rstudio.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2024-04-11 22:20:02 UTC",
+        "Built": "R 4.3.0; ; 2024-07-18 18:21:27 UTC; unix"
       }
     },
     "rlang": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "rlang",
         "Version": "1.1.3",
@@ -808,14 +1029,21 @@
         "Packaged": "2024-01-09 13:33:10 UTC; lionel",
         "Author": "Lionel Henry [aut, cre],\n  Hadley Wickham [aut],\n  mikefc [cph] (Hash implementation based on Mike's xxhashlite),\n  Yann Collet [cph] (Author of the embedded xxHash library),\n  Posit, PBC [cph, fnd]",
         "Maintainer": "Lionel Henry <lionel@posit.co>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2024-01-10 12:00:02 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-24 15:08:52 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-01-11 12:53:47 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "rlang",
+        "RemoteRef": "rlang",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.1.3"
       }
     },
     "sass": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Type": "Package",
         "Package": "sass",
@@ -837,14 +1065,21 @@
         "Packaged": "2024-03-15 21:58:01 UTC; cpsievert",
         "Author": "Joe Cheng [aut],\n  Timothy Mastny [aut],\n  Richard Iannone [aut] (<https://orcid.org/0000-0003-3925-190X>),\n  Barret Schloerke [aut] (<https://orcid.org/0000-0001-9986-114X>),\n  Carson Sievert [aut, cre] (<https://orcid.org/0000-0002-4958-2844>),\n  Christophe Dervieux [ctb] (<https://orcid.org/0000-0003-4474-2498>),\n  RStudio [cph, fnd],\n  Sass Open Source Foundation [ctb, cph] (LibSass library),\n  Greter Marcel [ctb, cph] (LibSass library),\n  Mifsud Michael [ctb, cph] (LibSass library),\n  Hampton Catlin [ctb, cph] (LibSass library),\n  Natalie Weizenbaum [ctb, cph] (LibSass library),\n  Chris Eppstein [ctb, cph] (LibSass library),\n  Adams Joseph [ctb, cph] (json.cpp),\n  Trifunovic Nemanja [ctb, cph] (utf8.h)",
         "Maintainer": "Carson Sievert <carson@rstudio.com>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2024-03-15 22:30:02 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-24 15:09:05 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-03-17 04:06:04 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "sass",
+        "RemoteRef": "sass",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "0.4.9"
       }
     },
     "shiny": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "shiny",
         "Type": "Package",
@@ -875,7 +1110,7 @@
     },
     "sourcetools": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "sourcetools",
         "Type": "Package",
@@ -892,14 +1127,21 @@
         "Encoding": "UTF-8",
         "NeedsCompilation": "yes",
         "Packaged": "2023-01-31 18:03:04 UTC; kevin",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2023-02-01 10:10:02 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-07-30 18:09:48 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2023-04-21 21:44:53 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "sourcetools",
+        "RemoteRef": "sourcetools",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "0.1.7-1"
       }
     },
     "sys": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "sys",
         "Type": "Package",
@@ -920,12 +1162,19 @@
         "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
         "Repository": "RSPM",
         "Date/Publication": "2023-05-23 07:50:02 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2023-12-05 20:45:12 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2023-12-05 20:45:12 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "sys",
+        "RemoteRef": "sys",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "3.4.2"
       }
     },
     "vctrs": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "vctrs",
         "Title": "Vector Helpers",
@@ -948,14 +1197,21 @@
         "Packaged": "2023-12-01 16:27:12 UTC; davis",
         "Author": "Hadley Wickham [aut],\n  Lionel Henry [aut],\n  Davis Vaughan [aut, cre],\n  data.table team [cph] (Radix sort based on data.table's forder() and\n    their contribution to R's order()),\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Davis Vaughan <davis@posit.co>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2023-12-01 23:50:02 UTC",
-        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2024-04-24 15:11:44 UTC; unix"
+        "Built": "R 4.3.0; x86_64-pc-linux-gnu; 2023-12-04 11:50:37 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "vctrs",
+        "RemoteRef": "vctrs",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "0.6.5"
       }
     },
     "withr": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "withr",
         "Title": "Run Code 'With' Temporarily Modified Global State",
@@ -978,14 +1234,21 @@
         "Packaged": "2024-01-16 10:22:29 UTC; lionel",
         "Author": "Jim Hester [aut],\n  Lionel Henry [aut, cre],\n  Kirill Müller [aut],\n  Kevin Ushey [aut],\n  Hadley Wickham [aut],\n  Winston Chang [aut],\n  Jennifer Bryan [ctb],\n  Richard Cotton [ctb],\n  Posit Software, PBC [cph, fnd]",
         "Maintainer": "Lionel Henry <lionel@posit.co>",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "Date/Publication": "2024-01-16 14:20:02 UTC",
-        "Built": "R 4.3.0; ; 2024-07-30 18:08:10 UTC; unix"
+        "Built": "R 4.3.0; ; 2024-01-17 20:13:58 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "withr",
+        "RemoteRef": "withr",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "3.0.0"
       }
     },
     "xtable": {
       "Source": "CRAN",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
       "description": {
         "Package": "xtable",
         "Version": "1.8-4",
@@ -1000,18 +1263,32 @@
         "URL": "http://xtable.r-forge.r-project.org/",
         "Depends": "R (>= 2.10.0)",
         "License": "GPL (>= 2)",
-        "Repository": "CRAN",
+        "Repository": "RSPM",
         "NeedsCompilation": "no",
         "Packaged": "2019-04-21 10:56:51 UTC; dsco036",
         "Author": "David B. Dahl [aut],\n  David Scott [aut, cre],\n  Charles Roosen [aut],\n  Arni Magnusson [aut],\n  Jonathan Swinton [aut],\n  Ajay Shah [ctb],\n  Arne Henningsen [ctb],\n  Benno Puetz [ctb],\n  Bernhard Pfaff [ctb],\n  Claudio Agostinelli [ctb],\n  Claudius Loehnert [ctb],\n  David Mitchell [ctb],\n  David Whiting [ctb],\n  Fernando da Rosa [ctb],\n  Guido Gay [ctb],\n  Guido Schulz [ctb],\n  Ian Fellows [ctb],\n  Jeff Laake [ctb],\n  John Walker [ctb],\n  Jun Yan [ctb],\n  Liviu Andronic [ctb],\n  Markus Loecher [ctb],\n  Martin Gubri [ctb],\n  Matthieu Stigler [ctb],\n  Robert Castelo [ctb],\n  Seth Falcon [ctb],\n  Stefan Edwards [ctb],\n  Sven Garbade [ctb],\n  Uwe Ligges [ctb]",
         "Date/Publication": "2019-04-21 12:20:03 UTC",
-        "Built": "R 4.3.0; ; 2024-07-30 18:09:46 UTC; unix"
+        "Encoding": "UTF-8",
+        "Built": "R 4.3.0; ; 2024-01-09 00:45:05 UTC; unix",
+        "RemoteType": "standard",
+        "RemotePkgRef": "xtable",
+        "RemoteRef": "xtable",
+        "RemoteRepos": "https://packagemanager.posit.co/cran/__linux__/jammy/latest",
+        "RemoteReposName": "P3M",
+        "RemotePkgPlatform": "source",
+        "RemoteSha": "1.8-4"
       }
     }
   },
   "files": {
+    ".Rprofile": {
+      "checksum": "05fe96a00bebb3452b1496d5f0e164a1"
+    },
     "app.R": {
-      "checksum": "4cba7e2addd4458dcaac22d7f0180af6"
+      "checksum": "df54a898f5911b9eb0f68118922c084c"
+    },
+    "renv.lock": {
+      "checksum": "e1b1ad473d62ed6fb74d5ff85759aaea"
     }
   },
   "users": null
