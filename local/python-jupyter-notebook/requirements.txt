@@ -32,7 +32,7 @@ Pygments==2.6.1
 pyparsing==2.4.7
 pyrsistent==0.16.0
 python-dateutil==2.8.1
-pyzmq==19.0.1
+pyzmq
 qtconsole==4.7.5
 QtPy==1.9.0
 Send2Trash==1.5.0
