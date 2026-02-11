@@ -1,1 +1,2 @@
 fastapi
+pip==26

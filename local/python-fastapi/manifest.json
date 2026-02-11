@@ -9,7 +9,7 @@
     "version": "3.11.3",
     "package_manager": {
       "name": "pip",
-      "version": "22.2.2",
+      "version": "26",
       "package_file": "requirements.txt"
     }
   },
@@ -18,7 +18,7 @@
       "checksum": "f201888e2eefa5a2871c8449d8e5c9ea"
     },
     "app.py": {
-      "checksum": "e80a84e8be1e40c8760db2b65c2840a5"
+      "checksum": "d9749ad1fb0af7cd135a26f1381cb3ce"
     }
   }
 }
