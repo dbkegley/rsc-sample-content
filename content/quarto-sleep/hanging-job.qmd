@@ -1,0 +1,15 @@
+---
+title: "Hanging Job"
+format: html
+---
+
+```{r}
+sleep_time <- as.numeric(Sys.getenv("SLEEP_TIME", 0))
+
+writeLines(sprintf("Sleeping for %f seconds", sleep_time))
+
+Sys.sleep(sleep_time)
+
+writeLines("Finished sleeping, good bye!")
+```
+
