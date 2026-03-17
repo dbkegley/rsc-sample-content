@@ -14,7 +14,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
 # ============================================================================
 
 # Show available commands and usage
-@default:
+default:
     just --list
 
 # ============================================================================
@@ -22,7 +22,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
 # ============================================================================
 
 # Show detailed help and usage examples
-@help:
+help:
     echo "Posit RStudio Connect Deployment Tool"
     echo "======================================"
     echo ""
@@ -54,7 +54,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     echo "  just deploy-quarto PATH       - Deploy Quarto content"
 
 # Display current configuration
-@config:
+config:
     #!/usr/bin/env bash
     echo "Connect Configuration:"
     echo "====================="
@@ -68,7 +68,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     echo "Python Version: {{ PY_VERSION }}"
 
 # Check if required tools are installed
-@check-tools:
+check-tools:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -136,7 +136,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     fi
 
 # Install rsconnect R package globally
-@install-rsconnect:
+install-rsconnect:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -149,7 +149,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     echo "✓ rsconnect v$version installed successfully"
 
 # Detect content type in a directory
-@detect PATH:
+detect PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -238,7 +238,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     exit 1
 
 # Setup dependencies for content
-@setup PATH:
+setup PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -250,26 +250,21 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     fi
 
     # Detect content type
-    content_type=$(just detect "$path")
-
-    echo "Setting up dependencies for $content_type content at: $path"
+    content_type=$(just detect "$path" 2>/dev/null)
 
     case "$content_type" in
         r-*|quarto)
             # Setup R environment if renv.lock exists
             if [[ -f "$path/renv.lock" ]]; then
-                just setup-r "$path"
-            fi
+                just setup-r "$path"            fi
 
             # Setup Python environment if requirements.txt exists (for quarto with Python)
             if [[ -f "$path/requirements.txt" ]] && [[ "$content_type" == "quarto" ]]; then
-                just setup-python "$path"
-            fi
+                just setup-python "$path"            fi
             ;;
         python-*|jupyter-notebook)
             if [[ -f "$path/requirements.txt" ]]; then
-                just setup-python "$path"
-            else
+                just setup-python "$path"            else
                 echo "No requirements.txt found, skipping Python setup"
             fi
             ;;
@@ -279,7 +274,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     esac
 
 # Setup R environment and restore packages
-@setup-r PATH:
+setup-r PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -289,8 +284,6 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     if [[ "$path" != /* ]]; then
         path="$(pwd)/$path"
     fi
-
-    echo "Setting up R environment..."
 
     # Extract R version from renv.lock if exists
     if [[ -f "$path/renv.lock" ]] && command -v jq &>/dev/null; then
@@ -299,19 +292,15 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
         r_version="{{ R_VERSION }}"
     fi
 
-    echo "R version required: $r_version"
-
     # Check if rig is available to manage R versions
     if command -v rig &>/dev/null; then
         if ! rig list | grep -q "$r_version"; then
-            echo "Installing R $r_version with rig..."
             rig add "$r_version"
         fi
     fi
 
     # Restore renv packages if renv.lock exists
     if [[ -f "$path/renv.lock" ]]; then
-        echo "Restoring R packages with renv..."
         cd "$path"
         Rscript -e 'renv::restore()'
     else
@@ -319,7 +308,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     fi
 
 # Setup Python environment with uv (ephemeral)
-@setup-python PATH:
+setup-python PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -329,8 +318,6 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     if [[ "$path" != /* ]]; then
         path="$(pwd)/$path"
     fi
-
-    echo "Setting up Python environment..."
 
     if [[ ! -f "$path/requirements.txt" ]]; then
         echo "No requirements.txt found, skipping Python setup"
@@ -338,17 +325,13 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     fi
 
     py_version="{{ PY_VERSION }}"
-    echo "Python version: $py_version"
 
     # Install dependencies with uv (ephemeral environment)
-    echo "Installing Python dependencies with uv..."
     cd "$path"
     uv pip install --python "$py_version" -r requirements.txt
 
-    echo "Python dependencies installed"
-
 # Create or update dependency lock files for content
-@lock PATH:
+lock PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -360,25 +343,21 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     fi
 
     # Detect content type
-    content_type=$(just detect "$path")
-
-    echo "Creating/updating lock files for $content_type content at: $path"
+    content_type=$(just detect "$path" 2>/dev/null)
 
     case "$content_type" in
         r-*|quarto)
-            just lock-r "$path"
-            ;;
+            just lock-r "$path"            ;;
         python-*|jupyter-notebook)
-            just lock-python "$path"
-            ;;
+            just lock-python "$path"            ;;
         *)
-            echo "Warning: Unknown content type, cannot create lock files"
+            echo "Error: Unknown content type, cannot create lock files"
             exit 1
             ;;
     esac
 
 # Create or update renv.lock for R content
-@lock-r PATH:
+lock-r PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -388,23 +367,17 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     if [[ "$path" != /* ]]; then
         path="$(pwd)/$path"
     fi
-
-    echo "Creating/updating renv.lock for R content..."
 
     cd "$path"
 
     if [[ -f "renv.lock" ]]; then
-        echo "Updating existing renv.lock..."
         Rscript -e 'renv::snapshot()'
     else
-        echo "Initializing new renv project..."
         Rscript -e 'renv::init()'
     fi
 
-    echo "✓ renv.lock updated successfully"
-
 # Create or update requirements.txt for Python content
-@lock-python PATH:
+lock-python PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -414,28 +387,24 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     if [[ "$path" != /* ]]; then
         path="$(pwd)/$path"
     fi
-
-    echo "Creating/updating requirements.txt for Python content..."
 
     cd "$path"
 
     py_version="{{ PY_VERSION }}"
 
-    if [[ -f "requirements.txt" ]]; then
-        echo "Updating existing requirements.txt..."
-        # Compile requirements to lock versions
-        uv pip compile requirements.txt --python "$py_version" --output-file requirements.txt.lock
-        mv requirements.txt.lock requirements.txt
-    else
-        echo "Creating new requirements.txt from installed packages..."
-        # Create requirements.txt from current environment
-        uv pip freeze --python "$py_version" > requirements.txt
+    # Extract major.minor version (e.g., "3.11.3" -> "3.11")
+    py_major_minor="${py_version%.*}"
+
+    # Initialize uv project if not already initialized
+    if [[ ! -f "pyproject.toml" ]]; then
+        uv init --bare --python "$py_major_minor"
     fi
 
-    echo "✓ requirements.txt updated successfully"
+    # Generate requirements.txt from the project file
+    uv pip compile pyproject.toml -o requirements.txt
 
-# Generate or update manifest.json for content (requires lock file)
-@manifest PATH:
+# Generate or update manifest.json for content
+manifest PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -447,28 +416,23 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     fi
 
     # Detect content type
-    content_type=$(just detect "$path")
-
-    echo "Generating manifest.json for $content_type content at: $path"
+    content_type=$(just detect "$path" 2>/dev/null)
 
     # First, ensure lock files exist
     just lock "$path"
-
     case "$content_type" in
         r-*|quarto)
-            just manifest-r "$path"
-            ;;
+            just manifest-r "$path"            ;;
         python-*|jupyter-notebook)
-            just manifest-python "$path"
-            ;;
+            just manifest-python "$path"            ;;
         *)
-            echo "Warning: Unknown content type, cannot create manifest"
+            echo "Error: Unknown content type, cannot create manifest"
             exit 1
             ;;
     esac
 
 # Generate manifest.json for R content
-@manifest-r PATH:
+manifest-r PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -479,10 +443,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
         path="$(pwd)/$path"
     fi
 
-    echo "Generating manifest.json for R content..."
-
-    app_mode=$(just _r-app-mode "$path")
-    echo "App mode: $app_mode"
+    app_mode=$(just _r-app-mode "$path" 2>/dev/null)
 
     cd "$path"
 
@@ -492,10 +453,8 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     writeManifest(appMode = '$app_mode')
     "
 
-    echo "✓ manifest.json created successfully"
-
 # Generate manifest.json for Python content
-@manifest-python PATH:
+manifest-python PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -506,37 +465,35 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
         path="$(pwd)/$path"
     fi
 
-    echo "Generating manifest.json for Python content..."
-
-    deploy_type=$(just _python-deploy-type "$path")
-    entrypoint=$(just _python-entrypoint "$path")
-    main_file=$(just _python-main-file "$path")
-
-    echo "Manifest type: $deploy_type"
+    deploy_type=$(just _python-deploy-type "$path" 2>/dev/null)
+    entrypoint=$(just _python-entrypoint "$path" 2>/dev/null)
+    main_file=$(just _python-main-file "$path" 2>/dev/null)
+    py_version="{{ PY_VERSION }}"
 
     cd "$path"
 
     # Generate manifest based on type
     case "$deploy_type" in
         fastapi|dash|api)
-            echo "Creating manifest for $deploy_type application..."
-            uv tool run --with rsconnect-python rsconnect write-manifest "$deploy_type" \
+            uv tool run --python "$py_version" --with rsconnect-python rsconnect write-manifest "$deploy_type" \
+              --overwrite \
               --entrypoint "$entrypoint" \
               .
             ;;
         shiny)
-            echo "Creating manifest for Shiny for Python application..."
-            uv tool run --with rsconnect-python rsconnect write-manifest shiny .
+            uv tool run --python "$py_version" --with rsconnect-python rsconnect write-manifest shiny \
+              --overwrite \
+              .
             ;;
         streamlit)
-            echo "Creating manifest for Streamlit application..."
-            uv tool run --with rsconnect-python rsconnect write-manifest api \
+            uv tool run --python "$py_version" --with rsconnect-python rsconnect write-manifest api \
+              --overwrite \
               --entrypoint "$entrypoint" \
               .
             ;;
         notebook)
-            echo "Creating manifest for Jupyter Notebook..."
-            uv tool run --with rsconnect-python rsconnect write-manifest notebook \
+            uv tool run --python "$py_version" --with rsconnect-python rsconnect write-manifest notebook \
+              --overwrite \
               "$main_file"
             ;;
         *)
@@ -545,10 +502,8 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
             ;;
     esac
 
-    echo "✓ manifest.json created successfully"
-
 # List all deployable content in the repository
-@list-content:
+list-content:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -581,7 +536,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     fi
 
 # Deploy content to Connect (auto-detects type if not specified)
-@deploy PATH TYPE="auto":
+deploy PATH TYPE="auto":
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -597,11 +552,9 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
 
     # Detect content type if not specified
     if [[ "$specified_type" == "auto" ]]; then
-        content_type=$(just detect "$path")
-        echo "Auto-detected content type: $content_type"
+        content_type=$(just detect "$path" 2>/dev/null)
     else
         content_type="$specified_type"
-        echo "Using specified content type: $content_type"
     fi
 
     # Validate environment variables
@@ -611,42 +564,28 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     fi
 
     # Setup dependencies first
-    echo "Setting up dependencies..."
     just setup "$path"
-
-    echo ""
-    echo "Deploying $content_type content: $content_name"
-    echo "From: $path"
-    echo "To: $CONNECT_SERVER_URL"
-    echo ""
-
     # Deploy based on content type
     case "$content_type" in
         r-shiny|r-plumber|r-rmd|r-script)
-            just deploy-r "$path"
-            ;;
+            just deploy-r "$path"            ;;
         python-*|jupyter-notebook)
-            deploy_type=$(just _python-deploy-type "$path")
-            just deploy-python "$path" "$deploy_type"
-            ;;
+            deploy_type=$(just _python-deploy-type "$path" 2>/dev/null)
+            just deploy-python "$path" "$deploy_type"            ;;
         quarto)
-            just deploy-quarto "$path"
-            ;;
+            just deploy-quarto "$path"            ;;
         *)
             echo "Error: Unknown or unsupported content type: $content_type"
             exit 1
             ;;
     esac
 
-    echo ""
-    echo "✓ Deployment complete!"
-
 # ============================================================================
 # Helper Recipes for Type Detection and Configuration
 # ============================================================================
 
 # Get Python rsconnect deployment type for a path
-@_python-deploy-type PATH:
+_python-deploy-type PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -668,7 +607,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     esac
 
 # Get Python entrypoint for a path
-@_python-entrypoint PATH:
+_python-entrypoint PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -693,7 +632,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     fi
 
 # Get Python main file for a path
-@_python-main-file PATH:
+_python-main-file PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -714,7 +653,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     fi
 
 # Get R app mode for manifest generation
-@_r-app-mode PATH:
+_r-app-mode PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -738,7 +677,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
 # ============================================================================
 
 # Deploy R content (Shiny, Plumber, RMD) using rsconnect R package
-@deploy-r PATH:
+deploy-r PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -750,8 +689,6 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     fi
 
     content_name="$(basename "$path")"
-
-    echo "Deploying R content with rsconnect R package..."
 
     # Check if rsconnect is installed
     if ! Rscript -e 'packageVersion("rsconnect")' &>/dev/null; then
@@ -786,7 +723,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     "
 
 # Deploy Python content using rsconnect-python via uv
-@deploy-python PATH TYPE:
+deploy-python PATH TYPE:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -799,19 +736,16 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     fi
 
     content_name="$(basename "$path")"
-    entrypoint=$(just _python-entrypoint "$path")
-    main_file=$(just _python-main-file "$path")
-
-    echo "Deploying Python content with rsconnect-python (via uv)..."
-    echo "Deploy type: $deploy_type"
+    entrypoint=$(just _python-entrypoint "$path" 2>/dev/null)
+    main_file=$(just _python-main-file "$path" 2>/dev/null)
+    py_version="{{ PY_VERSION }}"
 
     cd "$path"
 
     # Deploy based on type using uv tool run for ephemeral rsconnect-python
     case "$deploy_type" in
         fastapi|dash|api)
-            echo "Deploying $deploy_type application..."
-            uv tool run --with rsconnect-python rsconnect deploy "$deploy_type" \
+            uv tool run --python "$py_version" --with rsconnect-python rsconnect deploy "$deploy_type" \
               --server "$CONNECT_SERVER_URL" \
               --api-key "$CONNECT_API_KEY" \
               --title "$content_name" \
@@ -819,24 +753,21 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
               .
             ;;
         shiny)
-            echo "Deploying Shiny for Python application..."
-            uv tool run --with rsconnect-python rsconnect deploy shiny \
+            uv tool run --python "$py_version" --with rsconnect-python rsconnect deploy shiny \
               --server "$CONNECT_SERVER_URL" \
               --api-key "$CONNECT_API_KEY" \
               --title "$content_name" \
               .
             ;;
         streamlit)
-            echo "Deploying Streamlit application..."
-            uv tool run --with rsconnect-python rsconnect deploy streamlit \
+            uv tool run --python "$py_version" --with rsconnect-python rsconnect deploy streamlit \
               --server "$CONNECT_SERVER_URL" \
               --api-key "$CONNECT_API_KEY" \
               --title "$content_name" \
               "$main_file"
             ;;
         notebook)
-            echo "Deploying Jupyter Notebook..."
-            uv tool run --with rsconnect-python rsconnect deploy notebook \
+            uv tool run --python "$py_version" --with rsconnect-python rsconnect deploy notebook \
               --server "$CONNECT_SERVER_URL" \
               --api-key "$CONNECT_API_KEY" \
               --title "$content_name" \
@@ -850,7 +781,7 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     esac
 
 # Deploy Quarto content
-@deploy-quarto PATH:
+deploy-quarto PATH:
     #!/usr/bin/env bash
     set -euo pipefail
 
@@ -860,10 +791,6 @@ export PY_VERSION := env("PY_VERSION", "3.11.3")
     if [[ "$path" != /* ]]; then
         path="$(pwd)/$path"
     fi
-
-    content_name="$(basename "$path")"
-
-    echo "Deploying Quarto content..."
 
     if ! command -v quarto &>/dev/null; then
         echo "Error: quarto not found"

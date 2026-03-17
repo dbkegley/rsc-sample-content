@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "locale": "en_US.UTF-8",
+  "metadata": {
+    "appmode": "jupyter-static",
+    "entrypoint": "add.ipynb"
+  },
+  "python": {
+    "version": "3.11.3",
+    "package_manager": {
+      "name": "pip",
+      "version": "26.0.1",
+      "package_file": "requirements.txt"
+    }
+  },
+  "environment": {
+    "python": {
+      "requires": ">=3.11"
+    }
+  },
+  "files": {
+    "add.ipynb": {
+      "checksum": "085e17945a26a2c04996861914e1e457"
+    },
+    "requirements.txt": {
+      "checksum": "ebdf6ed8cb4bf6624deaa0f1cb3d58c1"
+    }
+  }
+}

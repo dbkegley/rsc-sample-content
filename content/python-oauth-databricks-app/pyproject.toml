@@ -1,0 +1,10 @@
+[project]
+name = "python-oauth-databricks-app"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "databricks-sql-connector==3.0.1",
+    "databricks-sdk==0.20.0",
+    "posit-sdk==0.3.1",
+    "shiny==0.7.1",
+]

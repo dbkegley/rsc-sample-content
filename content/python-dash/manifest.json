@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "locale": "en_US.UTF-8",
+  "metadata": {
+    "appmode": "python-dash",
+    "entrypoint": "app:app"
+  },
+  "python": {
+    "version": "3.11.3",
+    "package_manager": {
+      "name": "pip",
+      "version": "26.0.1",
+      "package_file": "requirements.txt"
+    }
+  },
+  "environment": {
+    "python": {
+      "requires": ">=3.11"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "8faf8fd25af54d6e6e46e0bf535ff0d9"
+    },
+    "app.py": {
+      "checksum": "1ab995370eeeb47bdd1ab0263291fd08"
+    },
+    "pyproject.toml": {
+      "checksum": "24ccf73cd21e9b5ef333a54c497ab5cd"
+    }
+  }
+}
