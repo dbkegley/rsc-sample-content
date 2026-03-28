@@ -1,0 +1,11 @@
+---
+title: "quarto-doc"
+---
+
+## An Example Quarto Doc
+
+Here's some example R code to make things interesting:
+
+```{r}
+1 + 2
+```
