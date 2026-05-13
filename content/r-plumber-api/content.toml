@@ -1,0 +1,11 @@
+[[deployments]]
+  server = "http://localhost:3939"
+  guid = "a1bbdc4b-e1ac-4eb9-b4f5-a2f2ac388254"
+
+[[deployments]]
+  server = "https://connect.staging.pct.posit.it"
+  guid = "a4bc89f3-04fc-43f8-83f5-3a6861e22b48"
+
+[metadata]
+  name = "r-plumber-api-test-cli"
+  title = "R Plumber API Test (CLI)"

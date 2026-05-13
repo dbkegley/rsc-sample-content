@@ -1,0 +1,3 @@
+[[deployments]]
+  server = "http://localhost:3939"
+  guid = "5e350d3c-5aa8-479f-b459-f5fbf09f119d"

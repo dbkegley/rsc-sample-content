@@ -1,0 +1,11 @@
+[[deployments]]
+  server = "https://connect.staging.pct.posit.it"
+  guid = "a30c4b0e-b6fe-4f8d-af97-ef180d2adf91"
+
+[[deployments]]
+  server = "http://localhost:3939"
+  guid = "7ef1dd0e-e6ad-49ec-8e01-eaf7a5d24966"
+
+[metadata]
+  name = "python-fastapi-test-cli"
+  title = "Python FastAPI Test (CLI)"

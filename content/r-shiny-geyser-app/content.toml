@@ -1,0 +1,7 @@
+[[deployments]]
+  server = "http://localhost:3939"
+  guid = "fc9904be-f251-487c-aa3b-6c1c11489ed5"
+
+[[deployments]]
+  server = "https://connect.staging.pct.posit.it"
+  guid = "3cd2c275-cb3a-4544-8500-06ddb9c8ad6e"

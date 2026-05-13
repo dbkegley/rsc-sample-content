@@ -1,0 +1,10 @@
+[[deployments]]
+  server = "http://localhost:3939"
+  guid = "b9c1aaef-2d95-4466-87ba-20f5d71e9d3a"
+
+[bundle]
+  entrypoint = "index.Rmd"
+
+[metadata]
+  name = "r-rmd-test-cli"
+  title = "R Markdown Test (CLI)"
