@@ -1,0 +1,7 @@
+[[deployments]]
+  server = "http://localhost:3939"
+  guid = "757766cf-ba6d-441e-b856-75e008e470f0"
+
+[metadata]
+  name = "python-shiny-pg-kerberos"
+  title = "Python Shiny: PostgreSQL via Kerberos"
