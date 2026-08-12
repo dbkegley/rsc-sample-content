@@ -18,6 +18,7 @@ def get_env_info():
     """Get Kerberos-relevant environment variables."""
     return {
         "KRB5CCNAME": os.environ.get("KRB5CCNAME"),
+        "KRB_USER": os.environ.get("KRB_USER"),
         "USER": os.environ.get("USER"),
         "LOGNAME": os.environ.get("LOGNAME"),
         "HOME": os.environ.get("HOME"),
@@ -27,6 +28,7 @@ def get_env_info():
 def test_db_connection():
     """Test PostgreSQL connection using Kerberos credentials."""
     krb5ccname = os.environ.get("KRB5CCNAME")
+    krb_user = os.environ.get("KRB_USER")
     user = os.environ.get("USER") or os.environ.get("LOGNAME")
 
     if not krb5ccname:
@@ -34,15 +36,19 @@ def test_db_connection():
             "success": False,
             "error": "KRB5CCNAME not set",
             "KRB5CCNAME": None,
+            "KRB_USER": krb_user,
             "USER": user,
         }
 
     try:
+        _user = krb_user
+        if krb_user:
+            _user = krb_user.split("@")[0]
         conn = psycopg2.connect(
             host=PG_HOST,
             port=PG_PORT,
             dbname=PG_DATABASE,
-            user=user,
+            user=_user,
             krbsrvname="postgres",
             sslmode="disable",
             connect_timeout=10,
@@ -65,6 +71,7 @@ def test_db_connection():
         return {
             "success": True,
             "KRB5CCNAME": krb5ccname,
+            "KRB_USER": krb_user,
             "USER": user,
             "db_user": db_user,
             "db_name": db_name,
@@ -77,6 +84,7 @@ def test_db_connection():
             "success": False,
             "error": f"PostgreSQL connection failed: {e}",
             "KRB5CCNAME": krb5ccname,
+            "KRB_USER": krb_user,
             "USER": user,
             "pg_host": PG_HOST,
             "pg_database": PG_DATABASE,
@@ -86,6 +94,7 @@ def test_db_connection():
             "success": False,
             "error": f"Unexpected error: {e}",
             "KRB5CCNAME": krb5ccname,
+            "KRB_USER": krb_user,
             "USER": user,
         }
 
@@ -124,9 +133,7 @@ def server(input: Inputs, output: Outputs, session: Session):
     def krb_status():
         info = env_info()
         if info["KRB5CCNAME"]:
-            return ui.markdown(
-                f"**KRB5CCNAME_STATUS: SET** - `{info['KRB5CCNAME']}`"
-            )
+            return ui.markdown(f"**KRB5CCNAME_STATUS: SET** - `{info['KRB5CCNAME']}`")
         return ui.markdown("**KRB5CCNAME_STATUS: NOT_SET**")
 
     @render.ui

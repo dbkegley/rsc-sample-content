@@ -1,10 +1,11 @@
 [[deployments]]
-server = "http://localhost:3939"
-guid = "9131c4cf-0ea3-4a38-8049-d67a7064bdd8"
+  server = "http://localhost:3939"
+  guid = "13847804-59e7-4b22-a6e8-164ab1100ea7"
+
+[bundle]
+  [bundle.r]
+    version = ">=4.2"
 
 [metadata]
-name = "r-shiny-test-cli"
-title = "R Shiny Test (CLI)"
-
-[bundle.r]
-version = ">=4.2"
+  name = "r-shiny-test-cli"
+  title = "R Shiny Test (CLI)"

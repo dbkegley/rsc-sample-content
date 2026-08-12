@@ -1,3 +1,7 @@
 [[deployments]]
   server = "http://localhost:3939"
   guid = "96553f96-86f9-4989-934f-26b7724bcead"
+
+[[deployments]]
+  server = "http://internal-k8s-connectshared-dc67f982ac-1428132858.us-east-2.elb.amazonaws.com"
+  guid = "3a0a1d34-5930-4025-90c1-631592c146cd"
